@@ -32,6 +32,10 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/logout', [UserController::class, 'logout']);
     Route::get('/user', [UserController::class, 'get']);
     Route::put('/user/update', [UserController::class, 'update']);
+    Route::get('/anggota', [AnggotaController::class, 'index']);
+    Route::post('/anggota', [AnggotaController::class, 'create']);
+    Route::put('/anggota/{id}', [AnggotaController::class, 'update']);
+    Route::delete('/anggota/{id}', [AnggotaController::class, 'destroy']);
     // Route::resource('anggota', AnggotaController::class);
     // Route::resource('jenis-transaksi', JenisTransaksiController::class);
     // Route::resource('tabungan', TabunganAnggotaController::class);
